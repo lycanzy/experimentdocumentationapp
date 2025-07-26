@@ -1,0 +1,116 @@
+{% extends 'experiments/base.html' %}
+
+{% block content %}
+<div class="mb-4">
+    <h2>{{ step.title }}</h2>
+    <p class="text-muted">ID: {{ step.id }}</p>
+    <p class="text-muted">Flow: <a href="{% url 'flow_detail' flow_id=step.flow.id %}">{{ step.flow.title }}</a></p>
+    <p>{{ step.description }}</p>
+    <p><strong>Date:</strong> {{ step.date }}</p>
+    <div class="mb-3">
+        <strong>People:</strong>
+        {% for person in step.people.all %}
+        <span class="badge bg-secondary">{{ person.username }}</span>
+        {% endfor %}
+    </div>
+    
+    <!-- Step Relationships -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Step Relationships</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Previous Step:</h6>
+                    {% if step.previous_step %}
+                        <p class="mb-2">
+                            <span class="badge bg-info text-dark">
+                                <i class="bi bi-arrow-left"></i>
+                                {{ step.previous_step.id|slice:"-4:" }} - {{ step.previous_step.title }}
+                            </span>
+                        </p>
+                    {% else %}
+                        <p class="text-muted mb-2">No previous step</p>
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                    <h6>Next Steps:</h6>
+                    {% if step.next_steps.all %}
+                        {% for next_step in step.next_steps.all %}
+                            <span class="badge bg-info text-dark mb-1">
+                                {{ next_step.id|slice:"-4:" }} - {{ next_step.title }}
+                                <i class="bi bi-arrow-right"></i>
+                            </span>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted">No next steps</p>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Edit Previous Step Form -->
+            <form method="post" class="mt-3">
+                {% csrf_token %}
+                <div class="row align-items-end">
+                    <div class="col-md-8">
+                        {{ link_form.previous_step.label_tag }}
+                        {{ link_form.previous_step }}
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" name="update_previous_step" class="btn btn-primary">
+                            Update Relationship
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Samples</h3>
+                <form method="post" action="{% url 'add_sample' step_id=step.id %}" class="mb-3">
+                    {% csrf_token %}
+                    {{ sample_form.as_p }}
+                    <button type="submit" class="btn btn-primary">Add Sample</button>
+                </form>
+                <div class="list-group">
+                    {% for sample in samples %}
+                    <div class="list-group-item">
+                        <h5 class="mb-1">{{ sample.name }}</h5>
+                        <p class="mb-1">{{ sample.description }}</p>
+                    </div>
+                    {% empty %}
+                    <p class="text-muted">No samples added yet.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Metadata</h3>
+                <form method="post" action="{% url 'add_metadata' step_id=step.id %}" class="mb-3">
+                    {% csrf_token %}
+                    {{ metadata_form.as_p }}
+                    <button type="submit" class="btn btn-primary">Add Metadata</button>
+                </form>
+                <div class="list-group">
+                    {% for item in metadata %}
+                    <div class="list-group-item">
+                        <h5 class="mb-1">{{ item.key }}</h5>
+                        <p class="mb-1">{{ item.value }}</p>
+                    </div>
+                    {% empty %}
+                    <p class="text-muted">No metadata added yet.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

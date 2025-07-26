@@ -1,0 +1,43 @@
+{% extends 'experiments/base.html' %}
+
+{% block content %}
+<div class="mb-4">
+    <h2>{{ flow.title }}</h2>
+    <p class="text-muted">ID: {{ flow.id }}</p>
+    <p class="text-muted">Experiment: <a href="{% url 'experiment_detail' experiment_id=flow.experiment.id %}">{{ flow.experiment.title }}</a></p>
+    <p>{{ flow.description }}</p>
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h3>Steps</h3>
+    <a href="{% url 'step_create' flow_id=flow.id %}" class="btn btn-primary">Create New Step</a>
+</div>
+
+<div class="row">
+    {% for step in steps %}
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ step.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">ID: {{ step.id }}</h6>
+                <p class="card-text">{{ step.description|truncatewords:30 }}</p>
+                <p class="text-muted">Date: {{ step.date }}</p>
+                <div class="mb-2">
+                    <strong>People:</strong>
+                    {% for person in step.people.all %}
+                    <span class="badge bg-secondary">{{ person.username }}</span>
+                    {% endfor %}
+                </div>
+                <a href="{% url 'step_detail' step_id=step.id %}" class="btn btn-outline-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">
+            No steps found. Start by creating a new step!
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

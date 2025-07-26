@@ -1,0 +1,323 @@
+{% extends 'experiments/base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Left Sidebar -->
+        <div class="col-md-3 col-lg-2 border-end p-3" style="min-height: calc(100vh - 72px);">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="mb-0">Experiments</h5>
+                <a href="{% url 'experiment_create' %}" class="btn btn-sm btn-outline-primary rounded-circle p-1" title="Create New Experiment">
+                    <i class="bi bi-plus" style="font-size: 1.1rem;"></i>
+                </a>
+            </div>
+            
+            <div class="list-group">
+                {% for experiment in experiments %}
+                <a href="?experiment_id={{ experiment.id }}" 
+                   class="list-group-item list-group-item-action {% if selected_experiment.id == experiment.id %}active{% endif %}"
+                   data-experiment-id="{{ experiment.id }}">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1">{{ experiment.title }}</h6>
+                        <small {% if selected_experiment.id == experiment.id %}class="text-white"{% else %}class="text-muted"{% endif %}>
+                            {{ experiment.id }}
+                        </small>
+                    </div>
+                    <small {% if selected_experiment.id == experiment.id %}class="text-white"{% else %}class="text-muted"{% endif %} 
+                           class="d-block text-truncate">
+                        {{ experiment.description }}
+                    </small>
+                </a>
+                {% empty %}
+                <div class="text-center text-muted p-3">
+                    <p>No experiments yet</p>
+                    <a href="{% url 'experiment_create' %}" class="btn btn-primary">Create Your First Experiment</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="col-md-9 col-lg-10 p-4">
+            {% if selected_experiment %}
+                <div class="d-flex justify-content-between align-items-start mb-4">
+                    <div>
+                        <h3>{{ selected_experiment.title }}</h3>
+                        <p class="text-muted">ID: {{ selected_experiment.id }}</p>
+                        <p>{{ selected_experiment.description }}</p>
+                    </div>
+                    <div class="btn-group">
+                        <a href="{% url 'flow_create' experiment_id=selected_experiment.id %}" 
+                           class="btn btn-outline-primary">
+                            <i class="bi bi-plus"></i> Add Flow
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 50px"></th>
+                                        <th style="width: 70px">#</th>
+                                        <th style="width: 120px">Flow ID</th>
+                                        <th>Description</th>
+                                        <th style="width: 200px">Created Date</th>
+                                        <th style="width: 100px">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for flow in selected_flows %}
+                                    <tr class="align-middle">
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-link text-decoration-none p-0" 
+                                                    type="button" 
+                                                    data-bs-toggle="collapse" 
+                                                    data-bs-target="#flow{{ flow.id }}" 
+                                                    aria-expanded="false">
+                                                <i class="bi bi-chevron-down"></i>
+                                            </button>
+                                        </td>
+                                        <td>{{ forloop.counter }}</td>
+                                        <td>
+                                            <code>{{ flow.id|slice:"-2:" }}</code>
+                                            <span class="d-none">{{ flow.id }}</span>
+                                        </td>
+                                        <td>{{ flow.description }}</td>
+                                        <td>{{ flow.created_at|date:"M d, Y H:i" }}</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary" 
+                                                    type="button"
+                                                    data-bs-toggle="modal" 
+                                                    data-bs-target="#addStepModal{{ flow.id }}">
+                                                <i class="bi bi-plus"></i> Step
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="6" class="p-0">
+                                            <div class="collapse" id="flow{{ flow.id }}">
+                                                <div class="card card-body m-2 border-0 bg-light">
+
+
+                                                    <!-- Steps Table -->
+                                                    <h6 class="mb-3">Steps for Flow {{ flow.id|slice:"-2:" }}</h6>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-sm mb-0">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style="width: 100px">Step ID</th>
+                                                                    <th>Title</th>
+                                                                    <th style="width: 150px">Previous Step</th>
+                                                                    <th style="width: 150px">Date</th>
+                                                                    <th style="width: 150px">People</th>
+                                                                    <th style="width: 100px">Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {% for step in flow.steps.all %}
+                                                                <tr>
+                                                                    <td><code>{{ step.id|slice:"-4:" }}</code></td>
+                                                                    <td>{{ step.title }}</td>
+                                                                    <td>
+                                                                        {% if step.previous_step %}
+                                                                            <span class="badge bg-info text-dark">
+                                                                                <i class="bi bi-arrow-left"></i>
+                                                                                {{ step.previous_step.id|slice:"-4:" }}
+                                                                            </span>
+                                                                        {% else %}
+                                                                            <span class="badge bg-secondary">Start</span>
+                                                                        {% endif %}
+                                                                    </td>
+                                                                    <td>{{ step.date|date:"M d, Y" }}</td>
+                                                                    <td>
+                                                                        {% for person in step.people.all %}
+                                                                        <span class="badge bg-secondary">{{ person.username }}</span>
+                                                                        {% endfor %}
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn-group">
+                                                                            <a href="{% url 'step_detail' step_id=step.id %}" 
+                                                                               class="btn btn-sm btn-outline-secondary"
+                                                                               title="Edit Step">
+                                                                                <i class="bi bi-pencil"></i>
+                                                                            </a>
+                                                                            <form method="post" action="{% url 'delete_step' step_id=step.id %}" 
+                                                                                  class="d-inline" 
+                                                                                  onsubmit="return confirm('Are you sure you want to delete this step? This cannot be undone.');">
+                                                                                {% csrf_token %}
+                                                                                <button type="submit" 
+                                                                                        class="btn btn-sm btn-outline-danger"
+                                                                                        title="Delete Step"
+                                                                                        {% if step.next_steps.exists %}
+                                                                                        disabled
+                                                                                        data-bs-toggle="tooltip"
+                                                                                        data-bs-placement="top"
+                                                                                        data-bs-title="Cannot delete: This step has dependent steps"
+                                                                                        {% endif %}>
+                                                                                    <i class="bi bi-trash"></i>
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                {% empty %}
+                                                                <tr>
+                                                                    <td colspan="5" class="text-center text-muted py-3">
+                                                                        No steps created yet
+                                                                    </td>
+                                                                </tr>
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Modal for adding steps -->
+                                    <div class="modal fade" id="addStepModal{{ flow.id }}" tabindex="-1">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Add Step to Flow {{ flow.id|slice:"-2:" }}</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <form method="post" action="{% url 'step_create' flow_id=flow.id %}" id="stepForm{{ flow.id }}">
+                                                    <div class="modal-body">
+                                                        {% csrf_token %}
+                                                        {% if messages %}
+                                                        <div class="messages">
+                                                            {% for message in messages %}
+                                                            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
+                                                                {{ message }}
+                                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                            </div>
+                                                            {% endfor %}
+                                                        </div>
+                                                        {% endif %}
+                                                        <div class="mb-3">
+                                                            <label for="step_type_{{ flow.id }}" class="form-label">Step Type</label>
+                                                            <select class="form-select" id="step_type_{{ flow.id }}" name="step_type" required>
+                                                                <option value="">Select a step type...</option>
+                                                                {% for step_type in step_types %}
+                                                                <option value="{{ step_type.code }}">{{ step_type.code }} - {{ step_type.name }}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                            <div class="form-text">The step number will be automatically assigned</div>
+                                                            <input type="hidden" name="flow_id" value="{{ flow.id }}">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="previous_step_{{ flow.id }}" class="form-label">Previous Step</label>
+                                                            <select class="form-select" id="previous_step_{{ flow.id }}" name="previous_step">
+                                                                <option value="">No previous step</option>
+                                                                {% for step in flow.steps.all %}
+                                                                <option value="{{ step.id }}">{{ step.id|slice:"-4:" }} - {{ step.title }}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                            <div class="form-text">Select the step that comes before this one in the workflow (optional)</div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="title_{{ flow.id }}" class="form-label">Title</label>
+                                                            <input type="text" class="form-control" id="title_{{ flow.id }}" name="title" required>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="description_{{ flow.id }}" class="form-label">Description</label>
+                                                            <textarea class="form-control" id="description_{{ flow.id }}" name="description" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="date_{{ flow.id }}" class="form-label">Date</label>
+                                                            <input type="date" class="form-control" id="date_{{ flow.id }}" name="date" required>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="people_{{ flow.id }}" class="form-label">People</label>
+                                                            <select class="form-select" id="people_{{ flow.id }}" name="people" multiple required>
+                                                                {% for user in users %}
+                                                                <option value="{{ user.id }}">{{ user.username }}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                            <div class="form-text">Select at least one person (use Ctrl/Cmd+click for multiple)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="submit" class="btn btn-primary" id="submit-step-{{ flow.id }}">Add Step</button>
+                                                    </div>
+                                                </form>
+                                                <script>
+                                                    document.getElementById('submit-step-{{ flow.id }}').addEventListener('click', function(e) {
+                                                        // Disable the button to prevent double submission
+                                                        this.disabled = true;
+                                                        this.form.submit();
+                                                    });
+
+                                                    // Reset form and button when modal is hidden
+                                                    document.getElementById('addStepModal{{ flow.id }}').addEventListener('hidden.bs.modal', function () {
+                                                        const form = this.querySelector('form');
+                                                        const submitButton = document.getElementById('submit-step-{{ flow.id }}');
+                                                        if (form) form.reset();
+                                                        if (submitButton) submitButton.disabled = false;
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% empty %}
+                                    <tr>
+                                        <td colspan="6" class="text-center py-4">
+                                            <div class="text-muted">
+                                                No flows found for this experiment. Click "Add Flow" to create one!
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="text-center">
+                    <h4>Welcome to Experiment Documentation</h4>
+                    <p class="text-muted">Select an experiment from the left sidebar or create a new one to get started.</p>
+                    
+                    {% if experiments %}
+                    <div class="row mt-4">
+                        <div class="col-md-6 mx-auto">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Quick Stats</h5>
+                                    <p class="mb-2">Total Experiments: {{ experiments|length }}</p>
+                                    <p class="mb-0">Latest Update: 
+                                        {% if experiments.0 %}
+                                            {{ experiments.0.updated_at|date:"M d, Y" }}
+                                        {% else %}
+                                            N/A
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    });
+</script>
+{% endblock %}

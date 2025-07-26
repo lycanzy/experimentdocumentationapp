@@ -1,0 +1,259 @@
+2025-07-25 11:49:41,959 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['e1M4TSKnR7QIvZopsWuCGI8kMVspkXNNtlZx8tvfjblMNhgdjDJpEmGQXmZ06Fnm'], 'step_suffix': ['AA00'], 'flow_id': ['AAA000AA'], 'title': ['testtt'], 'description': ['tetststst'], 'date': ['2025-07-26']}>
+2025-07-25 11:49:41,959 - experiments.views - DEBUG - Created full step ID: AAA000AA-AA00
+2025-07-25 11:49:41,960 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['e1M4TSKnR7QIvZopsWuCGI8kMVspkXNNtlZx8tvfjblMNhgdjDJpEmGQXmZ06Fnm'], 'step_suffix': ['AA00'], 'flow_id': ['AAA000AA'], 'title': ['testtt'], 'description': ['tetststst'], 'date': ['2025-07-26'], 'id': ['AAA000AA-AA00']}>
+2025-07-25 11:49:41,973 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Ensure this value has at most 11 characters (it has 13).</li></ul></li><li>people<ul class="errorlist" id="id_people_error"><li>This field is required.</li></ul></li></ul>
+2025-07-25 11:50:07,943 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['x3dn8Y14hfNSCrYK3od6DNehOh2dBGKuMnqQnzMWJjiWUJQyU5sTBrMNZIzOnok3'], 'step_suffix': ['AA11'], 'flow_id': ['AAA000AA'], 'title': ['TESTSTE'], 'description': ['TESTSETETST'], 'date': ['2025-07-25']}>
+2025-07-25 11:50:07,943 - experiments.views - DEBUG - Created full step ID: AAA000AA-AA11
+2025-07-25 11:50:07,943 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['x3dn8Y14hfNSCrYK3od6DNehOh2dBGKuMnqQnzMWJjiWUJQyU5sTBrMNZIzOnok3'], 'step_suffix': ['AA11'], 'flow_id': ['AAA000AA'], 'title': ['TESTSTE'], 'description': ['TESTSETETST'], 'date': ['2025-07-25'], 'id': ['AAA000AA-AA11']}>
+2025-07-25 11:50:07,944 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Ensure this value has at most 11 characters (it has 13).</li></ul></li><li>people<ul class="errorlist" id="id_people_error"><li>This field is required.</li></ul></li></ul>
+2025-07-25 11:53:22,071 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['wRX27E1qmxP4diz3lIQQtm0q1GiWUyO0LbavmfMiOBk8vArRcp5Dr0yWc7PxGgoz'], 'step_suffix': ['AA11'], 'flow_id': ['AAA000AA'], 'title': ['AAAAAA'], 'description': ['SDFDFSDF'], 'date': ['2025-07-25'], 'people[]': ['1']}>
+2025-07-25 11:53:22,071 - experiments.views - DEBUG - Created full step ID: AAA000AA-AA11
+2025-07-25 11:53:22,071 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['wRX27E1qmxP4diz3lIQQtm0q1GiWUyO0LbavmfMiOBk8vArRcp5Dr0yWc7PxGgoz'], 'step_suffix': ['AA11'], 'flow_id': ['AAA000AA'], 'title': ['AAAAAA'], 'description': ['SDFDFSDF'], 'date': ['2025-07-25'], 'people[]': ['1'], 'id': ['AAA000AA-AA11']}>
+2025-07-25 11:53:22,080 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Ensure this value has at most 11 characters (it has 13).</li></ul></li><li>people<ul class="errorlist" id="id_people_error"><li>This field is required.</li></ul></li></ul>
+2025-07-25 11:58:43,876 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['d2bG19cqAO26HSl9OhGw6P9bbSW2t6Vesmo9gKXi2SxaZadXFYVj4tHHmjtDfOvN'], 'step_suffix': ['AA00'], 'flow_id': ['AAA000AA'], 'title': ['TEST1ING'], 'description': ['FFFF'], 'date': ['2025-07-19'], 'people': ['1']}>
+2025-07-25 11:58:43,876 - experiments.views - DEBUG - Created full step ID: AAA000AA-AA00
+2025-07-25 11:58:43,876 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['d2bG19cqAO26HSl9OhGw6P9bbSW2t6Vesmo9gKXi2SxaZadXFYVj4tHHmjtDfOvN'], 'step_suffix': ['AA00'], 'flow_id': ['AAA000AA'], 'title': ['TEST1ING'], 'description': ['FFFF'], 'date': ['2025-07-19'], 'people': ['1'], 'id': ['AAA000AA-AA00']}>
+2025-07-25 11:58:43,881 - experiments.views - DEBUG - Form is valid
+2025-07-25 11:58:43,893 - experiments.views - DEBUG - Step saved with ID: AAA000AA-AA00
+2025-07-25 11:58:43,893 - experiments.views - DEBUG - Setting people: ['1']
+2025-07-25 14:07:08,036 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['HVkaQAPnMmEh94RzCebNxfMy46Tp7Mp6m7JcrZyIE5WNSHbtEIT04HIXYTrbzaYn'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['test'], 'description': ['test'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 14:07:08,037 - experiments.views - DEBUG - Created full step ID: AAA000AA-CJ00
+2025-07-25 14:07:08,037 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['HVkaQAPnMmEh94RzCebNxfMy46Tp7Mp6m7JcrZyIE5WNSHbtEIT04HIXYTrbzaYn'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['test'], 'description': ['test'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-CJ00']}>
+2025-07-25 14:07:08,044 - experiments.views - DEBUG - Form is valid
+2025-07-25 14:07:08,045 - experiments.views - ERROR - Error saving step: NOT NULL constraint failed: experiments_step.step_type_id
+2025-07-25 14:08:35,582 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['std1O0H0D8Mz0m8kCIrxx9kluQKD2W6b7FC3ppqlvR45JZseEc9K4BgKoDipukFs'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['AAA'], 'description': ['AAAA'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 14:08:35,583 - experiments.views - DEBUG - Created full step ID: AAA000AA-CJ00
+2025-07-25 14:08:35,583 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['std1O0H0D8Mz0m8kCIrxx9kluQKD2W6b7FC3ppqlvR45JZseEc9K4BgKoDipukFs'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['AAA'], 'description': ['AAAA'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-CJ00']}>
+2025-07-25 14:08:35,585 - experiments.views - DEBUG - Form is valid
+2025-07-25 14:08:35,586 - experiments.views - ERROR - Error saving step: NOT NULL constraint failed: experiments_step.step_type_id
+2025-07-25 14:09:16,206 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['kkMjoj1MCxGvaisR8PE1nQfyOnu09xdBZwblZIK7ugY1TVMLajmeUibXIa2MBVMS'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['bbbb'], 'description': ['AAA'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 14:09:16,208 - experiments.views - DEBUG - Created full step ID: AAA000AA-CJ00
+2025-07-25 14:09:16,208 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['kkMjoj1MCxGvaisR8PE1nQfyOnu09xdBZwblZIK7ugY1TVMLajmeUibXIa2MBVMS'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['bbbb'], 'description': ['AAA'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-CJ00']}>
+2025-07-25 14:09:16,213 - experiments.views - DEBUG - Form is valid
+2025-07-25 14:09:16,215 - experiments.views - ERROR - Error saving step: NOT NULL constraint failed: experiments_step.step_type_id
+2025-07-25 14:17:02,417 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['UytkCbJjjXHtXBWRhqOdF7YaG3RmkEwazKSmdAsEbGZZGegLjUwqczUzAQp8M25r'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['TEST'], 'description': ['TEST'], 'date': ['2025-07-24'], 'people': ['1']}>
+2025-07-25 14:17:02,418 - experiments.views - DEBUG - Created full step ID: AAA000AA-CJ00
+2025-07-25 14:17:02,418 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['UytkCbJjjXHtXBWRhqOdF7YaG3RmkEwazKSmdAsEbGZZGegLjUwqczUzAQp8M25r'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['TEST'], 'description': ['TEST'], 'date': ['2025-07-24'], 'people': ['1'], 'id': ['AAA000AA-CJ00']}>
+2025-07-25 14:17:02,420 - experiments.views - DEBUG - Form is valid
+2025-07-25 14:17:02,420 - experiments.views - ERROR - Error saving step: NOT NULL constraint failed: experiments_step.step_type_id
+2025-07-25 14:17:25,899 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['UPmiU8lHNSCiljTKgyXfd57emuRCBTerz1Lkvx42FBUO4WdEi2FsKx3Dghpo3hNI'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['AAAA'], 'description': ['AAAAA'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 14:17:25,902 - experiments.views - DEBUG - Created full step ID: AAA000AA-CJ00
+2025-07-25 14:17:25,908 - experiments.views - DEBUG - Form is valid
+2025-07-25 14:17:25,935 - experiments.views - DEBUG - Step created successfully with ID: AAA000AA-CJ00
+2025-07-25 14:17:25,935 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['UPmiU8lHNSCiljTKgyXfd57emuRCBTerz1Lkvx42FBUO4WdEi2FsKx3Dghpo3hNI'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['AAAA'], 'description': ['AAAAA'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-CJ00']}>
+2025-07-25 14:17:25,943 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Step with this Id already exists.</li></ul></li></ul>
+2025-07-25 14:18:06,558 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['6mTfE8B8aKbNK4LOy2uh1e9wTOGehzaxLyihfxkt2ttjtH5IAwcuyG5VNBe0JXJO'], 'step_type': ['SJ'], 'flow_id': ['AAA000AA'], 'title': ['BBBB'], 'description': ['BBBB'], 'date': ['2025-07-24'], 'people': ['1']}>
+2025-07-25 14:18:06,560 - experiments.views - DEBUG - Created full step ID: AAA000AA-SJ00
+2025-07-25 14:18:06,563 - experiments.views - DEBUG - Form is valid
+2025-07-25 14:18:06,592 - experiments.views - DEBUG - Step created successfully with ID: AAA000AA-SJ00
+2025-07-25 14:18:06,592 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['6mTfE8B8aKbNK4LOy2uh1e9wTOGehzaxLyihfxkt2ttjtH5IAwcuyG5VNBe0JXJO'], 'step_type': ['SJ'], 'flow_id': ['AAA000AA'], 'title': ['BBBB'], 'description': ['BBBB'], 'date': ['2025-07-24'], 'people': ['1'], 'id': ['AAA000AA-SJ00']}>
+2025-07-25 14:18:06,595 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Step with this Id already exists.</li></ul></li></ul>
+2025-07-25 14:18:24,613 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['v4CIKCoRWqvLFLlNzxFl8FS9ptq2DBS4ag1Kl17cO9NhooFHB1nyF7OyjgYO5Zrl'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['AAA'], 'description': ['SSSS'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 14:18:24,615 - experiments.views - DEBUG - Created full step ID: AAA000AA-CJ01
+2025-07-25 14:18:24,618 - experiments.views - DEBUG - Form is valid
+2025-07-25 14:18:24,645 - experiments.views - DEBUG - Step created successfully with ID: AAA000AA-CJ01
+2025-07-25 14:18:24,646 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['v4CIKCoRWqvLFLlNzxFl8FS9ptq2DBS4ag1Kl17cO9NhooFHB1nyF7OyjgYO5Zrl'], 'step_type': ['CJ'], 'flow_id': ['AAA000AA'], 'title': ['AAA'], 'description': ['SSSS'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-CJ01']}>
+2025-07-25 14:18:24,648 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Step with this Id already exists.</li></ul></li></ul>
+2025-07-25 14:18:56,218 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['NRVxTsWUldt8TFvchOwRnQ43bnPNnyqSs3kzuRFfdWLECiP6jie4Ui0s5anzPWZ9'], 'step_type': ['JB'], 'flow_id': ['AAA000AA'], 'title': ['FFF'], 'description': ['AAAA'], 'date': ['2025-07-24'], 'people': ['1']}>
+2025-07-25 14:18:56,220 - experiments.views - DEBUG - Created full step ID: AAA000AA-JB00
+2025-07-25 14:18:56,222 - experiments.views - DEBUG - Form is valid
+2025-07-25 14:18:56,251 - experiments.views - DEBUG - Step created successfully with ID: AAA000AA-JB00
+2025-07-25 14:18:56,251 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['NRVxTsWUldt8TFvchOwRnQ43bnPNnyqSs3kzuRFfdWLECiP6jie4Ui0s5anzPWZ9'], 'step_type': ['JB'], 'flow_id': ['AAA000AA'], 'title': ['FFF'], 'description': ['AAAA'], 'date': ['2025-07-24'], 'people': ['1'], 'id': ['AAA000AA-JB00']}>
+2025-07-25 14:18:56,254 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Step with this Id already exists.</li></ul></li></ul>
+2025-07-25 14:22:37,207 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['aoy1bEbMQjFrrqvBFbUBx0KhhtqqdUxJPAX3M3U7I2XXa3PvHFCO4sGGbgYcFi60'], 'step_type': ['SJ'], 'flow_id': ['AAA000AA'], 'title': ['方法'], 'description': ['烦烦烦'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 14:22:37,217 - experiments.views - DEBUG - Creating step with ID: AAA000AA-SJ01
+2025-07-25 14:22:37,242 - experiments.views - DEBUG - Step created successfully with ID: AAA000AA-SJ01
+2025-07-25 14:22:37,242 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['aoy1bEbMQjFrrqvBFbUBx0KhhtqqdUxJPAX3M3U7I2XXa3PvHFCO4sGGbgYcFi60'], 'step_type': ['SJ'], 'flow_id': ['AAA000AA'], 'title': ['方法'], 'description': ['烦烦烦'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-SJ01']}>
+2025-07-25 14:22:37,250 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Step with this Id already exists.</li></ul></li></ul>
+2025-07-25 14:30:55,170 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['DvbCZnE0ImDGvurZ20HGo66hEkoMnPb4iHAEAMnlA5Vce7LT4upTVy2Gy7WyPdKl'], 'step_type': ['YM'], 'flow_id': ['AAA000AA'], 'title': ['啊啊'], 'description': [' 的打法'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 14:30:55,176 - experiments.views - DEBUG - Found step type: YM - 研磨
+2025-07-25 14:30:55,177 - experiments.views - DEBUG - Generated step ID: AAA000AA-YM00
+2025-07-25 14:30:55,178 - experiments.views - DEBUG - Created step data with ID: AAA000AA-YM00
+2025-07-25 14:30:55,179 - experiments.views - DEBUG - Form data: <QueryDict: {'csrfmiddlewaretoken': ['DvbCZnE0ImDGvurZ20HGo66hEkoMnPb4iHAEAMnlA5Vce7LT4upTVy2Gy7WyPdKl'], 'step_type': ['YM'], 'flow_id': ['AAA000AA'], 'title': ['啊啊'], 'description': [' 的打法'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-YM00']}>
+2025-07-25 14:30:55,184 - experiments.views - DEBUG - Form is valid, saving...
+2025-07-25 14:30:55,187 - experiments.views - DEBUG - Step saved with ID: AAA000AA-YM00
+2025-07-25 14:30:55,188 - experiments.views - DEBUG - Added people: ['1']
+2025-07-25 14:30:55,196 - experiments.views - DEBUG - Processing form with data: <QueryDict: {'csrfmiddlewaretoken': ['DvbCZnE0ImDGvurZ20HGo66hEkoMnPb4iHAEAMnlA5Vce7LT4upTVy2Gy7WyPdKl'], 'step_type': ['YM'], 'flow_id': ['AAA000AA'], 'title': ['啊啊'], 'description': [' 的打法'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-YM00']}>
+2025-07-25 14:30:55,204 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>id<ul class="errorlist" id="id_id_error"><li>Step with this Id already exists.</li></ul></li></ul>
+2025-07-25 14:34:06,740 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['xOEDRBJUGDsDyC4yZbGBNHY6kX7OR4Vnc03Fs0sfymK9hfos1FoOk9UveKFAjsuE'], 'step_type': ['GD'], 'flow_id': ['AAA000AA'], 'title': ['11123'], 'description': ['3214'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 14:34:06,741 - experiments.views - DEBUG - Found step type: GD - 刮刀涂布
+2025-07-25 14:34:06,742 - experiments.views - DEBUG - Generated step ID: AAA000AA-GD00
+2025-07-25 14:34:06,743 - experiments.views - DEBUG - Created step data with ID: AAA000AA-GD00
+2025-07-25 14:34:06,743 - experiments.views - DEBUG - Form data: <QueryDict: {'csrfmiddlewaretoken': ['xOEDRBJUGDsDyC4yZbGBNHY6kX7OR4Vnc03Fs0sfymK9hfos1FoOk9UveKFAjsuE'], 'step_type': ['GD'], 'flow_id': ['AAA000AA'], 'title': ['11123'], 'description': ['3214'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-GD00']}>
+2025-07-25 14:34:06,749 - experiments.views - DEBUG - Form is valid, saving...
+2025-07-25 14:34:06,758 - experiments.views - DEBUG - Step saved with ID: AAA000AA-GD00
+2025-07-25 14:34:06,759 - experiments.views - DEBUG - Added people: ['1']
+2025-07-25 14:41:00,680 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: experiments_step.previous_step_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\experiments\views.py", line 42, in dashboard
+    return render(request, 'experiments/dashboard.html', {
+        'experiments': experiments,
+    ...<3 lines>...
+        'step_types': step_types
+    })
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\query.py", line 1951, in _fetch_all
+    self._prefetch_related_objects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\query.py", line 1328, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\query.py", line 2397, in prefetch_related_objects
+    obj_list, additional_lookups = prefetch_one_level(
+                                   ~~~~~~~~~~~~~~~~~~^
+        obj_to_fetch,
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        level,
+        ^^^^^^
+    )
+    ^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\query.py", line 2561, in prefetch_one_level
+    ) = prefetcher.get_prefetch_querysets(
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        instances, lookup.get_current_querysets(level)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 800, in get_prefetch_querysets
+    for rel_obj in queryset:
+                   ^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Users\wenzhe.yi\Desktop\experimentdocumentationapp\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: experiments_step.previous_step_id
+2025-07-25 14:55:46,357 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['qjXQGM9mwCd7cN4ecdEXeBE1htih1ZTS5vmShbSHolvDVqo8eHmaL3AqbgQ3tns9'], 'step_type': ['SJ'], 'flow_id': ['AAA000AA'], 'previous_step': ['AAA000AA-CJ01'], 'title': ['AAAA'], 'description': ['BBBBB'], 'date': ['2025-07-26']}>
+2025-07-25 14:55:46,358 - experiments.views - DEBUG - Found step type: SJ - 烧结
+2025-07-25 14:55:46,360 - experiments.views - DEBUG - Generated step ID: AAA000AA-SJ02
+2025-07-25 14:55:46,360 - experiments.views - DEBUG - Created step data with ID: AAA000AA-SJ02
+2025-07-25 14:55:46,361 - experiments.views - DEBUG - Form data: <QueryDict: {'csrfmiddlewaretoken': ['qjXQGM9mwCd7cN4ecdEXeBE1htih1ZTS5vmShbSHolvDVqo8eHmaL3AqbgQ3tns9'], 'step_type': ['SJ'], 'flow_id': ['AAA000AA'], 'previous_step': ['AAA000AA-CJ01'], 'title': ['AAAA'], 'description': ['BBBBB'], 'date': ['2025-07-26'], 'id': ['AAA000AA-SJ02']}>
+2025-07-25 14:55:46,368 - experiments.views - ERROR - Form validation errors: <ul class="errorlist"><li>people<ul class="errorlist" id="id_people_error"><li>This field is required.</li></ul></li></ul>
+2025-07-25 14:56:29,557 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['e2qaWCGdjx3srbOGornBJ36l7VRCif0nTePcx1pybglYaO8AqV5Ogv2K1IpoKDzE'], 'step_type': ['CQ'], 'flow_id': ['AAA000AA'], 'previous_step': ['AAA000AA-CJ00'], 'title': ['aaa'], 'description': ['BBBB'], 'date': ['2025-07-26'], 'people': ['1']}>
+2025-07-25 14:56:29,558 - experiments.views - DEBUG - Found step type: CQ - 裁切
+2025-07-25 14:56:29,564 - experiments.views - DEBUG - Generated step ID: AAA000AA-CQ00
+2025-07-25 14:56:29,565 - experiments.views - DEBUG - Created step data with ID: AAA000AA-CQ00
+2025-07-25 14:56:29,566 - experiments.views - DEBUG - Form data: <QueryDict: {'csrfmiddlewaretoken': ['e2qaWCGdjx3srbOGornBJ36l7VRCif0nTePcx1pybglYaO8AqV5Ogv2K1IpoKDzE'], 'step_type': ['CQ'], 'flow_id': ['AAA000AA'], 'previous_step': ['AAA000AA-CJ00'], 'title': ['aaa'], 'description': ['BBBB'], 'date': ['2025-07-26'], 'people': ['1'], 'id': ['AAA000AA-CQ00']}>
+2025-07-25 14:56:29,569 - experiments.views - DEBUG - Form is valid, saving...
+2025-07-25 14:56:29,570 - experiments.views - DEBUG - Set previous step: AAA000AA-CJ00
+2025-07-25 14:56:29,572 - experiments.views - DEBUG - Step saved with ID: AAA000AA-CQ00
+2025-07-25 14:56:29,574 - experiments.views - DEBUG - Added people: ['1']
+2025-07-25 15:06:12,092 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['7gH6IEr0mnlChEGHm69QbIOtjg4JkeVzMs68j3ale6D80h0BoAR3IaKSd3CvMCuQ'], 'step_type': ['YM'], 'flow_id': ['AAA000AA'], 'previous_step': [''], 'title': ['00'], 'description': ['00'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 15:06:12,093 - experiments.views - DEBUG - Found step type: YM - 研磨
+2025-07-25 15:06:12,094 - experiments.views - DEBUG - Generated step ID: AAA000AA-YM00
+2025-07-25 15:06:12,095 - experiments.views - DEBUG - Created step data with ID: AAA000AA-YM00
+2025-07-25 15:06:12,095 - experiments.views - DEBUG - Form data: <QueryDict: {'csrfmiddlewaretoken': ['7gH6IEr0mnlChEGHm69QbIOtjg4JkeVzMs68j3ale6D80h0BoAR3IaKSd3CvMCuQ'], 'step_type': ['YM'], 'flow_id': ['AAA000AA'], 'previous_step': [''], 'title': ['00'], 'description': ['00'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-YM00']}>
+2025-07-25 15:06:12,103 - experiments.views - DEBUG - Form is valid, saving...
+2025-07-25 15:06:12,111 - experiments.views - DEBUG - Step saved with ID: AAA000AA-YM00
+2025-07-25 15:06:12,112 - experiments.views - DEBUG - Added people: ['1']
+2025-07-25 15:06:35,475 - experiments.views - DEBUG - POST data received: <QueryDict: {'csrfmiddlewaretoken': ['HXh65LfTzyLv7QgC1RPlAMVUdWhms75jm9G8GaYerh31QtAw3lxy7eRj7JP8UvEA'], 'step_type': ['JB'], 'flow_id': ['AAA000AA'], 'previous_step': ['AAA000AA-YM00'], 'title': ['01'], 'description': ['01'], 'date': ['2025-07-25'], 'people': ['1']}>
+2025-07-25 15:06:35,476 - experiments.views - DEBUG - Found step type: JB - 搅拌
+2025-07-25 15:06:35,477 - experiments.views - DEBUG - Generated step ID: AAA000AA-JB00
+2025-07-25 15:06:35,477 - experiments.views - DEBUG - Created step data with ID: AAA000AA-JB00
+2025-07-25 15:06:35,478 - experiments.views - DEBUG - Form data: <QueryDict: {'csrfmiddlewaretoken': ['HXh65LfTzyLv7QgC1RPlAMVUdWhms75jm9G8GaYerh31QtAw3lxy7eRj7JP8UvEA'], 'step_type': ['JB'], 'flow_id': ['AAA000AA'], 'previous_step': ['AAA000AA-YM00'], 'title': ['01'], 'description': ['01'], 'date': ['2025-07-25'], 'people': ['1'], 'id': ['AAA000AA-JB00']}>
+2025-07-25 15:06:35,481 - experiments.views - DEBUG - Form is valid, saving...
+2025-07-25 15:06:35,481 - experiments.views - DEBUG - Set previous step: AAA000AA-YM00
+2025-07-25 15:06:35,487 - experiments.views - DEBUG - Step saved with ID: AAA000AA-JB00
+2025-07-25 15:06:35,490 - experiments.views - DEBUG - Added people: ['1']
